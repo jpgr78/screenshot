@@ -8,7 +8,7 @@ describe('My Dynamic Loading Page', () => {
         await DynamicLoadingPage.open('dynamic_loading/1');
 
         await expect(DynamicLoadingPage.startButton).toBeExisting();
-        await browser.saveScreenshot('./screenshot.png');
+        await browser.saveScreenshot('./screenshot/screenshot.png');
         
     });
      it('click', async () => {
@@ -16,7 +16,7 @@ describe('My Dynamic Loading Page', () => {
         await DynamicLoadingPage.startClick()
         await DynamicLoadingPage.startButton.waitForDisplayed({ timeout: 5000, reverse : true });
         await expect(DynamicLoadingPage.htest).toBeDisplayed();
-        await browser.saveScreenshot('./screenshot2.png');
+        await browser.saveScreenshot('./screenshot/screenshot2.png');
     });
 });
 
